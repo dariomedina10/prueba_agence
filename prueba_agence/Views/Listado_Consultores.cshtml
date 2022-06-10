@@ -1,0 +1,117 @@
+﻿@model IEnumerable<prueba_agence.Models.Cao_usuario>
+
+@{
+    ViewBag.Title = "Listado_Consultores";
+}
+
+<h2>Listado_Consultores</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.co_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_usuario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ds_senha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.co_usuario_autorizacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nu_matricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_nascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_admissao_empresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_desligamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_inclusao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_expiracao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dt_alteracao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ds_endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.co_no_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.no_email_pessoal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.msn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.co_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ds_senha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.co_usuario_autorizacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nu_matricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_nascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_admissao_empresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_desligamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_inclusao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_expiracao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dt_alteracao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ds_endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.co_no_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_email_pessoal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.msn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
